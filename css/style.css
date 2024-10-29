@@ -52,9 +52,9 @@ header{
     cursor: pointer;
 } */
 .logo-image img{
-  height: 4rem; 
+  height: 3.9rem; 
   border-radius:2rem 0;
-  /* top: -4rem; */
+  /* top: -5rem; */
 
 /* position:absolute; */
 
@@ -314,7 +314,7 @@ footer li:hover{
         display: none;
       }
       
-      .topnav a {
+        a {
         margin-top: .4rem;
         margin-left: .4rem;
         color: rgb(106, 208, 240);
@@ -324,10 +324,10 @@ footer li:hover{
         display: block;
       }
       
-      .topnav a.icon {
+        a.icon {
         background: rgb(9, 21, 26);
         border-radius: 1rem 0;
-        display: block;
+        /* display: block; */
         position: absolute;
         /* right: 0; */
         top: 0;
@@ -337,9 +337,16 @@ footer li:hover{
         border-radius: 1rem 0;
         background-color: rgb(116, 223, 255);
         color: rgb(7, 7, 7);
-        width: 20vw;
+        width: 15vh;
       }
       
+      a.icon:hover{
+        border-radius: 1rem 0;
+        background-color: rgb(116, 223, 255);
+        color: rgb(7, 7, 7);
+        width:0.90em;
+      }
+
       .active {
         background-color: #04AA6D;
         color: white;
