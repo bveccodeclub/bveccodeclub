@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | BVEC Code Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="image about/bvec code club.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="About.css">
+    <nav class="navbar">
+      <div class="navbar__logo">
+         <a href="https://coding.bvec.ac.in/">
+            <img src="image about/bvec code club.png" height="50" width="50" alt="BVEC Code Club Logo" class="navbar__logo-img" >
+         </a>
+      </div>
+
+      <ul class="navbar__links">
+         
+         <li><a href="https://coding.bvec.ac.in/about.html">About</a></li>
+         <li><a href="https://coding.bvec.ac.in/event.html">Event</a></li>
+         <li><a href="index.htmls">Team</a></li>
+         <li><a href="https://coding.bvec.ac.in/gallery.html">Gallery</a></li>
+         <li><a href="https://coding.bvec.ac.in/projects.html">Projects</a></li>
+         <li><a href="https://coding.bvec.ac.in/history.html">History</a></li>
+         <li><a href="https://coding.bvec.ac.in/contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="navbar__toggle" id="mobile-menu">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+      </div>
+   </nav>
+
+  </head>
+  <body>
+
+    <div class="content">
+      <div class="box">
+        <div class="box-left">
+          <img src="image about/BVEC CODE CLUB LOGO square.png" alt="" />
+        </div>
+        <div class="box-right">
+          <div class="box-title"><strong>{ ABOUT US }</strong></div>
+
+          <div class="box-description">
+            <span>BVEC code club is a crucial part of Barak Valley Engineering College which provides every possible opportunities to all the aspiring programmers who aspire to change the world for the better.
+            </span>
+            <br>
+            <span>The main purpose of the club is to make the coding environment in the campus better for all the students in all possible manner so that it can attract students. Better the environment better the mindset of the students to take the coding level up in the campus.</span>
+            <br>
+            <span>Since the inception of the club in 2019, the members over the years tried their level best to organise various coding events. As of 2022 the club's main responsibilities is to organise various coding events as the members have come with many ideas such as CODLLENGE, DEVLLENGE and various webinars on opensource, python, github, placement guides. The club focuses on Coding, Algorithmic Programming, Competitive programming, Web Designing, App Development, and various other aspects of Programming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="scroller" data-direction="right" data-speed="slow">
+      <div class="scroller__inner">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+    </div>
+    </div>
+    
+    <div class="scroller" data-speed="fast">
+      <h3><ul class="tag-list scroller__inner">
+        <li>{ Code, Create, Dominate }</li><br>
+        <li>{ BVEC Code Club }</li><br>
+        <li>{ Code, Create, Dominate }</li><br>
+        <li>{ BVEC Code Club }</li><br>
+        <li>{ Code, Create, Dominate }</li><br>
+        <li>{ BVEC Code Club }</li><br>
+      
+      </ul></h3>
+    </div>
+
+<div class="scroller" data-direction="right" data-speed="slow">
+      <div class="scroller__inner">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+    </div>
+</div>
+
+
+
+    <!--<p><strong>Our</strong></p>-->
+    <h1>Collaboration</h1>
+
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="./logos/gfg-new-logo.png" />
+        <img src="./logos/unstop-logo.svg" />
+        <img src="./logos/coding blocks.png" />
+        <img src="./logos/assam startup logo.png" />
+        <img src="./logos/coding ninjas.svg" />
+        <img src="./logos/enpro_logo__1_-removebg-preview.png" />
+        <img src="./logos/codechef.svg" />
+        <img src="./logos/coding blocks.png" />
+        <img src="./logos/assam startup logo.png" />
+        <img src="./logos/coding ninjas.svg" />
+        
+      </div>
+
+      <div class="logos-slide">
+        <img src="./logos/gfg-new-logo.png" />
+        <img src="./logos/coding blocks.png" />
+        <img src="./logos/assam startup logo.png" />
+        <img src="./logos/coding ninjas.svg" />
+        <img src="./logos/unstop-logo.svg" />
+        <img src="./logos/coding blocks.png" />
+        <img src="./logos/assam startup logo.png" />
+        <img src="./logos/coding ninjas.svg" />
+        <img src="./logos/enpro_logo__1_-removebg-preview.png" />
+        <img src="./logos/codechef.svg" />
+     
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="scroller" data-direction="right" data-speed="slow">
+      <div class="scroller__inner">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+    </div>
+   </div>
+    
+    <div class="scroller" data-speed="fast">
+      <h4><ul class="tag-list scroller__inner">
+        <li>{ Code, Create, Dominate }</li>
+        <li>{ Code, Create, Dominate }</li>
+        <li>{ Code, Create, Dominate }</li>
+        <li>{ Code, Create, Dominate }</li>
+        <li>{ Code, Create, Dominate }</li>
+      
+      </ul></h4>
+    </div>
+   
+   <div class="scroller" data-direction="right" data-speed="slow">
+      <div class="scroller__inner">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+        <img src="coding logos/1.png" alt="Logo 1">
+        <img src="coding logos/2.png" alt="Logo 1">
+        <img src="coding logos/3.png" alt="Logo 1">
+        <img src="coding logos/4.png" alt="Logo 1">
+        <img src="coding logos/5.png" alt="Logo 1">
+        <img src="coding logos/6.png" alt="Logo 1">
+        <img src="coding logos/7.png" alt="Logo 1">
+        <img src="coding logos/8.png" alt="Logo 1">
+        <img src="coding logos/9.png" alt="Logo 1">
+        <img src="coding logos/10.png" alt="Logo 1">
+    </div>
+   </div>
+   
+   <div id="yr23-24">
+    <h6>* Important Links *</h6>
+    <div class="links"><br>
+       <a href="">Home</a><br>
+       <a href="">Event</a><br>
+       <a href="">Team</a><br>
+       <a href="">Contact</a><br>
+    </div>
+ </div>
+ 
+      <footer>
+         <div class="footer-container">
+             <div class="contact-section">
+               <p><h3>Contacts :</h3>
+                  Email : <a href="#" style="color: black;">bveccodeclubofficial@gmail.com</a></p>
+                 
+                
+                 <!--<h3><strong>BVEC CODE CLUB</strong></h3>-->
+             </div>
+             
+             <div class="address-section">
+               <p><h3>Address :</h3>
+                 
+                     BVEC Code Club Office:<br>
+                     CSE Academic Building 1st Floor,<br>
+                     1st Room,<br>
+                     Karimganj, Assam, 788701
+                 </p>
+             </div>
+     
+             <div class="social-section">
+               <h3>Follow us</h3>
+                 
+                 <a href="https://www.linkedin.com/company/bvec-code-club/mycompany/"><i class="fa fa-linkedin-square"></i></a>
+                 <a href="https://www.instagram.com/bveccodeclubofficial/"><i class="fa fa-instagram"></i></a>
+                 <a href="#"><i class="fa fa-github-square"></i></a>
+                
+                 <a href="#"><i class="fa fa-facebook-square"></i></a>
+             
+   
+             </div>
+         </div>
+     
+         <div class="footer-bottom">
+             <span><p>✧  Developed and Maintained by : BVEC CODE CLUB  ✧</p></span>
+         </div>
+     </footer>
+   
+    <script src="scripts.js"></script>
+  </body>
+</html>
