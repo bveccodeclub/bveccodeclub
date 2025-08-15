@@ -1,675 +1,122 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BVEC Code Club - Contact</title>
-  
-  <!-- Google Fonts: Fira Code for headings & Inter for body -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Inter&display=swap" rel="stylesheet" />
-  
-  <!-- Bootstrap CSS CDN v5.3.2 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  
-  <!-- Font Awesome for icons -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    rel="stylesheet"
-  />
-
-  <style>
-    /* Base font settings */
-    body, p, a, button {
-      font-family: 'Inter', sans-serif;
-      transition: background 0.5s, color 0.5s;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Fira Code', monospace;
-      font-weight: 200;
-      transition: color 0.5s;
-      margin-bottom: 0.5rem;
-    }
-    /* Reset margins in paragraphs to control spacing */
-    p {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-    }
-
-    /* LIGHT MODE BACKGROUND */
-    body {
-      min-height: 100vh;
-      background: linear-gradient(120deg, #e3e7f3 0%, #d7dceb 60%, #f9fafc 100%);
-      background-size: 400% 400%;
-      animation: backgroundShift 25s ease infinite;
-      color: #333;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-    @keyframes backgroundShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* DARK MODE */
-    body.dark-mode {
-      background: linear-gradient(120deg, #181b24 0%, #222836 60%, #151923 100%);
-      color: #e6e9f0;
-    }
-    body.dark-mode h1, 
-    body.dark-mode h2,
-    body.dark-mode h3, 
-    body.dark-mode h4,
-    body.dark-mode h5, 
-    body.dark-mode h6 {
-      color: #ffffff;
-    }
-    body.dark-mode p,
-    body.dark-mode a {
-      color: #d0d4e0;
-    }
-    body.dark-mode a:hover {
-      color: #a2bee7;
-    }
-
-    /* Glassmorphism Container */
-    .glass {
-      background: rgba(255, 255, 255, 0.12);
-      border-radius: 18px;
-      border: 1.8px solid rgba(255, 255, 255, 0.22);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow:
-        0 8px 32px 0 rgba(0, 0, 0, 0.1),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.15);
-      transition: background 0.5s, color 0.5s, box-shadow 0.3s ease, transform 0.3s ease;
-      color: inherit;
-    }
-    body.dark-mode .glass {
-      background: rgba(25, 27, 41, 0.85);
-      border-color: rgba(156, 178, 220, 0.2);
-      box-shadow:
-        0 10px 40px 0 rgba(0, 0, 0, 0.6),
-        inset 0 0 0 1px rgba(156, 178, 220, 0.15);
-    }
-
-    /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(8px);
-      background: rgba(255, 255, 255, 0.5);
-      border-bottom: 2px solid rgba(47, 62, 107, 0.15);
-      padding: 1rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background 0.5s, border-color 0.5s;
-    }
-    body.dark-mode header {
-      background: rgba(28, 31, 45, 0.85);
-      border-color: rgba(156, 178, 220, 0.15);
-    }
-    /* Brand styling */
-    .brand-title {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 600;
-      font-size: 1.6rem;
-    }
-    .fa-code {
-      color: #001eff;
-      font-size: 2rem;
-      transition: color 0.4s;
-    }
-    body.dark-mode .fa-code {
-      color: #a1b1ff;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./css/contact.css">
     
-    /* Gradient text for brand */
-    .gradient-text {
-      background: linear-gradient(90deg, #2f47ff, #7882ed);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Dark/Light mode toggle */
-    #themeToggle {
-      background: transparent;
-      font-size: 1.5rem;
-      color: #001eff;
-      border: none;
-      cursor: pointer;
-      transition: color 0.3s, transform 0.3s;
-    }
-    #themeToggle:hover {
-      color: #7882ed;
-      transform: scale(1.1);
-    }
-    body.dark-mode #themeToggle {
-      color: #a1b1ff;
-    }
-    body.dark-mode #themeToggle:hover {
-      color: #a7b7ff;
-    }
-
-    /* Intro Section */
-    section.intro {
-      padding: 6rem 1.5rem 4rem;
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    section.intro h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      color: #2f3e6b;
-    }
-    body.dark-mode section.intro h1 {
-      color: #d3d6f3;
-    }
-    section.intro p {
-      font-size: 1.3rem;
-      color: #5b6188;
-      max-width: 550px;
-      margin: 0 auto 2rem;
-      line-height: 1.5;
-    }
-    body.dark-mode section.intro p {
-      color: #bbbccd;
-    }
-
-    /* Social Links Grid */
-    section.social-links {
-      max-width: 1140px;
-      margin: 0 auto 3rem;
-      padding: 0 1rem;
-    }
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.8rem;
-    }
-
-    /* Social Cards */
-    .social-card {
-      background: transparent;
-      padding: 2.5rem 2rem 3rem;
-      border-radius: 18px;
-      box-shadow: 0 5px 25px rgba(81, 97, 216, 0);
-      transform: translateY(30px);
-      opacity: 0;
-      cursor: pointer;
-      transition: box-shadow 0.4s ease, transform 0.4s ease;
-      outline: none;
-      user-select: none;
-      color: inherit;
-    }
-    .social-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-      box-shadow: 0 10px 40px rgba(81, 97, 216, 0.15);
-    }
-    .social-card:hover,
-    .social-card:focus-visible {
-      box-shadow: 0 18px 50px rgba(81, 97, 216, 0.35);
-      transform: translateY(-8px) scale(1.06);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      color: #3549bd;
-    }
-    body.dark-mode .social-card:hover,
-    body.dark-mode .social-card:focus-visible {
-      color: #869fff;
-      box-shadow: 0 18px 50px rgba(135, 153, 255, 0.35);
-    }
-
-    /* Social Icons */
-    .social-icon {
-      font-size: 3.6rem;
-      margin-bottom: 1.2rem;
-      color: #5161d8;
-      transition: color 0.3s;
-      display: block;
-    }
-    body.dark-mode .social-icon {
-      color: #a1b1ff;
-    }
-    .social-card:hover .social-icon,
-    .social-card:focus-visible .social-icon {
-      color: inherit;
-    }
-
-    /* Social Card titles and descriptions */
-    .social-card h5 {
-      font-size: 1.6rem;
-      margin-bottom: 0.6rem;
-    }
-    .social-card p {
-      font-size: 1.05rem;
-      color: #444f6e;
-      margin-bottom: 1.5rem;
-      transition: color 0.4s;
-    }
-    body.dark-mode .social-card p {
-      color: #c1c8eb;
-    }
-
-    /* Buttons */
-    .btn-coding {
-      background: linear-gradient(90deg, #5161d8, #7882ed);
-      border: none;
-      color: white;
-      font-weight: 700;
-      border-radius: 0.9rem;
-      padding: 0.7rem 2.2rem;
-      box-shadow: 0 0 20px transparent;
-      font-size: 1.1rem;
-      transition: box-shadow 0.4s ease, transform 0.3s ease;
-      user-select: none;
-      outline: none;
-    }
-    .btn-coding:hover,
-    .btn-coding:focus-visible {
-      box-shadow: 0 0 32px #5161d8;
-      transform: scale(1.1);
-      transition: all 0.3s ease;
-      color: #eef1f9;
-      text-decoration: none;
-    }
-    body.dark-mode .btn-coding {
-      background: linear-gradient(90deg, #5a6de8, #a5acff);
-      color: #e9eaff;
-    }
-
-    /* Contact Section */
-    section.contact-info {
-      max-width: 560px;
-      margin: 0 auto 5rem;
-      text-align: center;
-      padding: 0 1.2rem;
-    }
-    section.contact-info .glass {
-      padding: 2.8rem 2.2rem;
-    }
-    section.contact-info h3 {
-      margin-bottom: 1rem;
-      font-size: 2.8rem;
-      color: #374775;
-    }
-    body.dark-mode section.contact-info h3 {
-      color: #ccd2fc;
-    }
-    section.contact-info p {
-      font-size: 1.12rem;
-      margin-bottom: 0.6rem;
-      color: #4e5e8e;
-    }
-    body.dark-mode section.contact-info p {
-      color: #c0c9e7;
-    }
-    section.contact-info a {
-      color: #5161d8;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    section.contact-info a:hover {
-      color: #3549bd;
-      text-decoration: underline;
-    }
-    body.dark-mode section.contact-info a {
-      color: #a1b1ff;
-    }
-    body.dark-mode section.contact-info a:hover {
-      color: #6885ff;
-    }
-
-    /* Footer */
-    footer {
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      padding: 1.8rem 1rem;
-      text-align: center;
-      border-top: 1.8px solid rgba(255, 255, 255, 0.22);
-      position: relative;
-      font-size: 1rem;
-      color: #68759f;
-      font-weight: 600;
-      font-family: 'Inter', sans-serif;
-    }
-    body.dark-mode footer {
-      background: rgba(23, 26, 44, 0.88);
-      border-color: rgba(156, 178, 220, 0.3);
-      color: #a4b0e6;
-    }
-    footer a.main-website-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: linear-gradient(90deg, #5161d8, #7882ed);
-      color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 0.7rem 2rem;
-      border-radius: 1.1rem;
-      text-decoration: none;
-      box-shadow: 0 0 25px transparent;
-      transition: all 0.3s ease;
-      user-select: none;
-      margin-bottom: 1rem;
-      outline: none;
-    }
-    footer a.main-website-btn:hover,
-    footer a.main-website-btn:focus-visible {
-      box-shadow: 0 0 40px #5161d8;
-      transform: scale(1.05);
-      text-decoration: none;
-    }
-    body.dark-mode footer a.main-website-btn {
-      background: linear-gradient(90deg, #5a6de8, #a5acff);
-      color: #e9eaff;
-    }
-
-    /* Footer credit centered bottom */
-    .credit {
-      font-size: 0.9rem;
-      color: #001fa8;
-      font-weight: 600;
-      margin-top: 10px;
-      user-select: none;
-    }
-    body.dark-mode .credit {
-      color: #bac0ff;
-    }
-
-/* Loading Overlay */
-#loadingOverlay {
-  position: fixed;
-  inset: 0;
-  background: #000000; /* full black background */
-  z-index: 1050;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 10.6s ease; /* smooth fade-out */
-}
-
-/* Cool Neon Ring Loader */
-.loader-ring {
-  width: 80px;
-  height: 80px;
-  border: 6px solid rgba(255,255,255,0.1); /* faint base ring */
-  border-top: 6px solid #5a6de8;            /* main neon color */
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  box-shadow: 0 0 20px #5a6de8, 0 0 40px #5a6de8 inset;
-}
-
-@keyframes spin {
-  0%   { transform: rotate(0deg);   box-shadow: 0 0 20px #5a6de8, 0 0 40px #5a6de8 inset; }
-  50%  { transform: rotate(180deg); box-shadow: 0 0 30px #8699ff, 0 0 60px #8699ff inset; }
-  100% { transform: rotate(360deg); box-shadow: 0 0 20px #5a6de8, 0 0 40px #5a6de8 inset; }
-}
-
-/* Loading Text */
-#loadingOverlay p.loading-text {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  font-family: 'Fira Code', monospace;
-  color: #aab6ff;
-  letter-spacing: 1px;
-  animation: blink 80.2s infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0.5; }
-}
-
-
-    /* Fade-in animation for social cards */
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 767px) {
-      header {
-        padding: 1rem 1.5rem;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-      }
-      section.intro {
-        padding: 4rem 1rem 3rem;
-      }
-      section.intro h1 {
-        font-size: 2.5rem;
-      }
-      .social-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      }
-      .social-card {
-        padding: 2rem 1.5rem 2.5rem;
-      }
-      section.contact-info .glass {
-        padding: 2.2rem 1.8rem;
-      }
-      footer a.main-website-btn {
-        font-size: 1rem;
-        padding: 0.55rem 1.6rem;
-      }
-      footer {
-        font-size: 0.9rem;
-      }
-    }
-    @media (max-width: 479px) {
-      section.intro h1 {
-        font-size: 2rem;
-      }
-      .social-card h5 {
-        font-size: 1.25rem;
-      }
-      .social-icon {
-        font-size: 2.8rem;
-      }
-    }
-  </style>
 </head>
 <body>
+    <header>
+        <div class="menu">
+            <li> <a href="./index.html" >Home</a> </li>
+            <li> <a href="./about.html"  >About</a> </li>
+            <li> <a href="./event.html"  >Event</a> </li>
+            <li> <a href="./team.html"  >Team</a> </li>
+            
+        </div>
+       
+        <a href="./index.html"><div class="logo-image">
+            <img src="./img/logo.png" alt="">
+        </div></a>
+        
+    
+        <div class="menu">
+            <li> <a href="./gallery.html"  >Gallery</a> </li>
+            <li> <a href="./projects.html"  >Projects</a> </li>
+            <li> <a href="./history.html"  >History</a> </li>
+            <li> <a href="./contact.html"  >Contact</a> </li>
+    
+        </div>
+        
+       </header>
 
-  <!-- Loading Screen -->
-  <div id="loadingOverlay">
-    <div class="loader-ring"></div>
-    <p class="loading-text">Loading...</p>
-  </div>
+       <div class="topnav">
+     
+        <div id="myLinks">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./event.html">Event</a>
+          <a href="./team.html">Team</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./history.html">History</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+       <section class="contact_page">
+        <h1 class="contact_title">Contact Us</h1>
+        <p class="contact_msg">Have any question ? We'd love to hear from you. </p>
+           <div class="contact-details"> Email us at :<a href="mailto:bveccodeclubofficial@gmail.com" target="_blank">bveccodeclubofficial@gmail.com</a> <br> <br><br> BVEC Code Club Office: CSE Academic Building 1st Floor, 1st Room </div> 
 
-  <!-- Header -->
-  <header role="banner" aria-label="Site header">
-    <div class="brand-title" aria-label="BVEC Code Club Brand">
-      <i class="fa-solid fa-code" aria-hidden="true" title="BVEC Code Club Logo"></i>
-      <span class="gradient-text">BVEC Code Club</span>
+        
+        <!-- <div class="main_content">
+            <div class="find_us">
+                <h2 class="subtittle">How To Find Us</h2>
+                <hr class="hr_line">
+                <p class="content_subtitle">
+                    <a href="https://www.bvec.ac.in/" target="_blank" rel="noopener noreferrer" class="ancor"> 
+                      B.V.E.C
+                   </a> 
+                </p>
+                <hr class="hr_line">
+            </div>
+            <div class="find_us">
+                <h2 class="subtittle">Headquater</h2>
+                <hr class="hr_line">
+                <p class="content_subtitle">
+                  Barak Valley Engineering College, Nirala ,karimganj, Assam 788701. (Academic Building CSE Department 1st floor).
+                </p>
+                <hr class="hr_line">
+            </div>
+            <div class="find_us">
+                <h2 class="subtittle">Connect To Us</h2>
+                <hr class="hr_line">
+                <p class="content_subtitle">
+                 
+                </p>
+                <hr class="hr_line">
+            </div>
+        </div> -->
+
+       </section>
+
+
+       <footer>
+        <div class="footer-design"></div>
+        <div class="footer-item">
+
+        <div class="first-column">
+<h3>Pages</h3>
+<a href="#"><li>Privacy</li></a>
+<a href="#"><li>Terms</li></a>
+<a href="#"><li>Constitution</li></a>
+
+
+        </div>
+        <div class="second-column">
+            <img src="./img/bveclogo.png" alt="">
+        </div>
+        <div class="third-column">
+            <h3>Important Links</h3>
+            
+            <a href="https://bvec.ac.in" target="_blank"><li>BVEC Main Website</li></a>
+
+            <a href="#" target="_blank"><li>Club Magzine</li></a>
+            <a href="#" target="_blank"><li>Training & Placements</li></a>
+
+        </div>
     </div>
-    <button id="themeToggle" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode" aria-pressed="false">
-      <i class="fa-solid fa-moon" aria-hidden="true"></i>
-    </button>
-  </header>
-
-  <!-- Intro Section -->
-  <section class="intro" role="region" aria-labelledby="introTitle">
-    <h1 id="introTitle">Connect With Us</h1>
-    <p>
-      Join our vibrant community of passionate developers, innovators, and tech enthusiasts.
-      Connect across all platforms and be part of the coding revolution.
-    </p>
-  </section>
-
-  <!-- Social Links Section -->
-  <section class="social-links" role="region" aria-labelledby="socialLinksTitle">
-    <h2 id="socialLinksTitle" class="visually-hidden">Social Media Links</h2>
-    <div class="social-grid" id="socialCards">
-
-      <!-- Social Card Templates -->
-      <article tabindex="0" class="glass social-card" aria-label="WhatsApp Group" role="group">
-        <i class="fa-brands fa-whatsapp social-icon" aria-hidden="true" title="WhatsApp"></i>
-        <h5>WhatsApp Group</h5>
-        <p>Join our active group chats and discussions.</p>
-        <a href="#" class="btn btn-coding" target="_blank" rel="noopener">Join Now</a>
-      </article>
-
-      <article tabindex="0" class="glass social-card" aria-label="Discord Server" role="group">
-        <i class="fa-brands fa-discord social-icon" aria-hidden="true" title="Discord"></i>
-        <h5>Discord Server</h5>
-        <p>Real-time coding collaboration and voice chats.</p>
-        <a href="#" class="btn btn-coding" target="_blank" rel="noopener">Join Now</a>
-      </article>
-
-      <article tabindex="0" class="glass social-card" aria-label="Instagram" role="group">
-        <i class="fa-brands fa-instagram social-icon" aria-hidden="true" title="Instagram"></i>
-        <h5>Instagram</h5>
-        <p>Follow our latest updates and events.</p>
-        <a href="#" class="btn btn-coding" target="_blank" rel="noopener">Follow</a>
-      </article>
-
-      <article tabindex="0" class="glass social-card" aria-label="GitHub" role="group">
-        <i class="fa-brands fa-github social-icon" aria-hidden="true" title="GitHub"></i>
-        <h5>GitHub</h5>
-        <p>Explore our open-source projects.</p>
-        <a href="#" class="btn btn-coding" target="_blank" rel="noopener">View</a>
-      </article>
-
-      <article tabindex="0" class="glass social-card" aria-label="Medium" role="group">
-        <i class="fa-brands fa-medium social-icon" aria-hidden="true" title="Medium"></i>
-        <h5>Medium</h5>
-        <p>Read our technical articles and blogs.</p>
-        <a href="#" class="btn btn-coding" target="_blank" rel="noopener">Read</a>
-      </article>
-
-      <article tabindex="0" class="glass social-card" aria-label="Stack Overflow" role="group">
-        <i class="fa-brands fa-stack-overflow social-icon" aria-hidden="true" title="Stack Overflow"></i>
-        <h5>Stack Overflow</h5>
-        <p>Ask and answer coding questions.</p>
-        <a href="#" class="btn btn-coding" target="_blank" rel="noopener">Visit</a>
-      </article>
-
-      <article tabindex="0" class="glass social-card" aria-label="Twitter" role="group">
-        <i class="fa-brands fa-twitter social-icon" aria-hidden="true" title="Twitter"></i>
-        <h5>Twitter</h5>
-        <p>Follow us for instant updates and code tips.</p>
-        <a href="#" class="btn btn-coding" target="_blank" rel="noopener">Follow</a>
-      </article>
-
-      <article tabindex="0" class="glass social-card" aria-label="LinkedIn" role="group">
-        <i class="fa-brands fa-linkedin social-icon" aria-hidden="true" title="LinkedIn"></i>
-        <h5>LinkedIn</h5>
-        <p>Connect professionally and see our projects.</p>
-        <a href="#" class="btn btn-coding" target="_blank" rel="noopener">Connect</a>
-      </article>
-
-      <article tabindex="0" class="glass social-card" aria-label="YouTube" role="group">
-        <i class="fa-brands fa-youtube social-icon" aria-hidden="true" title="YouTube"></i>
-        <h5>YouTube</h5>
-        <p>Watch our tutorials and event highlights.</p>
-        <a href="#" class="btn btn-coding" target="_blank" rel="noopener">Watch</a>
-      </article>
-
-      <article tabindex="0" class="glass social-card" aria-label="Linktree" role="group">
-        <i class="fa-brands fa-linktree social-icon" aria-hidden="true" title="Linktree"></i>
-        <h5>Linktree</h5>
-        <p>Join our fast updates and coding alerts.</p>
-        <a href="#" class="btn btn-coding" target="_blank" rel="noopener">Join</a>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- Contact Info Section -->
-  <section class="contact-info" role="region" aria-labelledby="contactTitle">
-    <h3 id="contactTitle" class="text-center">Get in Touch</h3>
-    <div class="glass mx-auto p-4" style="max-width: 540px;">
-      <p>Email: <a href="mailto:contact@bveccodeclub.com">contact@bveccodeclub.com</a></p>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer role="contentinfo">
-    <a 
-      href="#" 
-      target="_blank" 
-      rel="noopener" 
-      class="main-website-btn" 
-      aria-label="Go to main BVEC Code Club website"
-    >
-      <i class="fa-solid fa-globe"></i> Go to Main Website
-    </a>
-    <div class="credit" aria-hidden="true">Developed & Designed by BVEC Code Club 2025</div>
-  </footer>
-
-  <!-- Bootstrap Javascript (for better interactive components, if you extend) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    // Loading overlay functionality
-    window.addEventListener("load", () => {
-      const overlay = document.getElementById("loadingOverlay");
-      overlay.style.opacity = "0";
-      setTimeout(() => {
-        overlay.style.display = "none";
-      }, 600);
-      animateSocialCardsSequentially();
-    });
-
-    // Animate social cards fade in one by one for smooth effect
-    function animateSocialCardsSequentially() {
-      const cards = document.querySelectorAll(".social-card");
-      cards.forEach((card, idx) => {
-        setTimeout(() => {
-          card.classList.add("visible");
-        }, idx * 150);
-      });
-    }
-
-    // Dark/Light mode toggle button logic
-    const themeToggleBtn = document.getElementById("themeToggle");
-    themeToggleBtn.addEventListener("click", () => {
-      const body = document.body;
-      body.classList.toggle("dark-mode");
-
-      // Toggle ARIA pressed attribute for accessibility
-      const isDark = body.classList.contains("dark-mode");
-      themeToggleBtn.setAttribute('aria-pressed', isDark);
-
-      // Toggle icon
-      const icon = themeToggleBtn.querySelector("i");
-      if (isDark) {
-        icon.classList.replace("fa-moon", "fa-sun");
-      } else {
-        icon.classList.replace("fa-sun", "fa-moon");
-      }
-    });
-
-    // Accessibility enhancement: keyboard focus style for social cards
-    document.querySelectorAll('.social-card').forEach(card => {
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          const link = card.querySelector('a');
-          if (link) {
-            link.click();
-          }
-        }
-      });
-    });
-  </script>
+    <div class="copyright"><p>Copyright  &copy 2025 | All Right Reserved - BVEC Code Club | Developed by -<a href="https://linkedin.in/in/techmonowar">Monowar</a> & <a href="https://linkedin.in/in/varistara">Vigyan</a></p> </div>
+    </footer>
+   
+<script src="./script/script.js"></script>
 </body>
 </html>
